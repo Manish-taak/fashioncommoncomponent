@@ -16,7 +16,7 @@ import Overlay from './overlay';
 export default function FirstRefresh() {
     const [showPopup, setShowPopup] = useState(false);
     const popupRef = useRef<HTMLDivElement>(null);
-
+// 
     useEffect(() => {
         // Check if the user has visited before using localStorage
         const hasVisited = localStorage.getItem('hasVisited');
