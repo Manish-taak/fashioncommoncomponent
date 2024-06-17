@@ -2,7 +2,7 @@
 // // Scroll Effect / Header
 // const [isScrolledDown, setIsScrolledDown] = useState(false); // State to track scroll direction
 
-import { cn } from "@/utils/cn";
+// import { cn } from "@/utils/cn";
 
 // useEffect(() => {
 //     let lastScrollTop = 0;
