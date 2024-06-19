@@ -92,3 +92,8 @@ export interface option {
     options: option[];
     error?: string;
   }
+
+  export interface icontype{
+    className?:string,
+    type?:string
+  }
