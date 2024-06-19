@@ -41,29 +41,29 @@ const Header = () => {
                                 class: "2 fail",
                             })
                         }
-                        className="text-black dark:text-cyan-400  dark:bg-gray-900"
+                        className="text-black dark:text-cyan-400 "
                     >
                         {user.name}
                     </h1>
                 </div>
                 <div>
-                    <h1 className="text-black dark:text-cyan-400  dark:bg-gray-900">
+                    <h1 className="text-black dark:text-cyan-400 ">
                         {count.value}
                     </h1>
                     <button
-                        className="text-black dark:text-cyan-400  dark:bg-gray-900"
+                        className="text-black dark:text-cyan-400 "
                         onClick={() => dispatch(increment())}
                     >
                         ++++++
                     </button>
                     <button
-                        className="text-black dark:text-cyan-400  dark:bg-gray-900"
+                        className="text-black dark:text-cyan-400 "
                         onClick={() => dispatch(decrement())}
                     >
                         --------
                     </button>
                     <button
-                        className="text-black dark:text-cyan-400  dark:bg-gray-900"
+                        className="text-black dark:text-cyan-400 "
                         onClick={() => dispatch(incrementByAmount(5))}
                     >
                         ***********
@@ -71,37 +71,37 @@ const Header = () => {
                 </div>
 
                 <div>
-                    <h1 className="text-[200px] text-black dark:text-cyan-400  dark:bg-gray-900">
+                    <h1 className="text-[200px] text-black dark:text-cyan-400 ">
                         {sec.value}
                     </h1>
                     <button
-                        className="text-black dark:text-cyan-400  dark:bg-gray-900"
+                        className="text-black dark:text-cyan-400  "
                         onClick={() => dispatch1(increment1())}
                     >
                         ++++++
                     </button>
                     <button
-                        className="text-black dark:text-cyan-400  dark:bg-gray-900"
+                        className="text-black dark:text-cyan-400  "
                         onClick={() => dispatch1(decrement1())}
                     >
                         --------
                     </button>
                     <button
-                        className="text-black dark:text-cyan-400  dark:bg-gray-900"
+                        className="text-black dark:text-cyan-400  "
                         onClick={() => dispatch1(both(5))}
                     >
                         ***********
                     </button>
                 </div>
                 <div className="flex items-center">
-                    <h1 className="text-black dark:text-cyan-400  dark:bg-gray-900">
+                    <h1 className="text-black dark:text-cyan-400  ">
                         {modeSlice.value}
                     </h1>
 
                     <button className="" onClick={handleToggle}>
                         {
                             <Icons
-                                className="w-8 text-black dark:text-cyan-400  dark:bg-gray-900"
+                                className="w-8 text-black dark:text-cyan-400  "
                                 type={`${mode != "dark" ? "darkmode" : "lightmode"}`}
                             />
                         }
