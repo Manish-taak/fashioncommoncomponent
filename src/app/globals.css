@@ -2,27 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background-color: white;
-  --text-color: black;
-}
+@layer utilities{
 
-.dark-mode {
-  --background-color: #141414;
-  --text-color: cyan;
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.tooltip {
-  @apply relative inline-block cursor-pointer;
-}
-.tooltiptext {
-  @apply invisible w-[120px] bg-[black] text-white text-center absolute z-[1] ml-[-60px] opacity-0 transition-opacity duration-[0.3s] p-[5px] rounded-md left-2/4 bottom-[125%]; /* Position the tooltip above the text */
-}
-.tooltip:hover .tooltiptext {
-  @apply visible opacity-100;
+  body {
+    @apply dark:bg-gray-900 
+  }
+  
+  .tooltip {
+    @apply relative inline-block cursor-pointer;
+  }
+  .tooltiptext {
+    @apply invisible w-[120px] bg-[black] text-white text-center absolute z-[1] ml-[-60px] opacity-0 transition-opacity duration-[0.3s] p-[5px] rounded-md left-2/4 bottom-[125%]; /* Position the tooltip above the text */
+  }
+  .tooltip:hover .tooltiptext {
+    @apply visible opacity-100;
+  }
 }
