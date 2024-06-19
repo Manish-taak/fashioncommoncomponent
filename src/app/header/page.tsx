@@ -24,11 +24,9 @@ const Page = () => {
         document.body.className = mode;
     }, [mode]);
 
-
-
     return (
         <>
-            <section className='bg-black dark:bg-white ' >
+            <section className='dark:bg-black bg-white ' >
                 <div>
                     <h1 onClick={() => setUser({
                         name: "sahil",
@@ -49,10 +47,14 @@ const Page = () => {
                     <button onClick={() => dispatch1(both(5))} >***********</button>
                 </div>
                 <h1>{modeSlice.value}</h1>
-                <button className='dark:text-white' onClick={handleToggle}>Dark/ll</button>
+                <button className='dark:text-white text-black' onClick={handleToggle}>Dark/ll</button>
             </section>
         </>
     )
 }
 
-export default Page 
+export default Page
+
+
+
+

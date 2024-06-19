@@ -9,7 +9,7 @@ interface ModeState {
 
 // Set the initial state
 const initialState: ModeState = {
-    value: "dark",
+    value: "light",
 };
 
 // Create a slice with reducers
@@ -19,7 +19,7 @@ const modeSlice = createSlice({
     reducers: {
         toggleMode: (state) => {
             // Toggle between "darkmode" and "lightmode"
-            state.value = state.value === "dark" ? "light" : "dark";
+            state.value = state.value === "light" ? "dark" : "light";
         },
     },
 });
