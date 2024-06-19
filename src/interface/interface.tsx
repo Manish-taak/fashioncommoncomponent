@@ -97,3 +97,8 @@ export interface option {
     className?:string,
     type?:string
   }
+
+  export interface tooltip{
+    children?:ReactNode,
+    text?:string
+  }

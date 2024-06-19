@@ -10,6 +10,7 @@ import {
 import { both, increment1, decrement1 } from "../redux/slice/SecoundSlice";
 import { toggleMode } from "../redux/slice/ModeSlice";
 import Icons from "@/icons";
+import Tooltip from "../components/ToolTip";
 
 const Page = () => {
   const { user, setUser } = useUser();
@@ -64,9 +65,12 @@ const Page = () => {
         </div>
         <div className="flex items-center">
           <h1>{modeSlice.value}</h1>
+          <Tooltip text={`${mode}`}>
+
           <button className="" onClick={handleToggle}>
             {<Icons className="w-8" type={`${mode != "dark" ? "darkmode" : "lightmode"}`} />}
           </button>
+          </Tooltip>
         </div>
       </section>
     </>
