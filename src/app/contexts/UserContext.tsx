@@ -35,3 +35,6 @@ export const useUser = () => {
     }
     return context;
 };
+
+
+// const {user ,setUser} = useUser(UserContext)
