@@ -27,9 +27,10 @@ const Page = () => {
   const mode = useAppSelector((state) => state.ModeSlice.value);
   console.log(mode, "mode");
   useEffect(() => {
-    mode !== "dark"
-      ? document.body.classList.add("dark-mode")
-      : document.body.classList.remove("dark-mode");
+    // mode !== "dark"
+    //   ? document.body.classList.add("dark-mode")
+    //   : document.body.classList.remove("dark-mode");
+ document.body.className = mode;
   }, [mode]);
 
   return (
@@ -43,32 +44,32 @@ const Page = () => {
                 class: "2 fail",
               })
             }
-            className="text-red-600"
+            className="text-black dark:text-cyan-400  dark:bg-gray-900"
           >
             {user.name}
           </h1>
         </div>
         <div>
-          <h1 className="">{count.value}</h1>
-          <button onClick={() => dispatch(increment())}>++++++</button>
-          <button onClick={() => dispatch(decrement())}>--------</button>
-          <button onClick={() => dispatch(incrementByAmount(5))}>
+          <h1 className="text-black dark:text-cyan-400  dark:bg-gray-900">{count.value}</h1>
+          <button className="text-black dark:text-cyan-400  dark:bg-gray-900" onClick={() => dispatch(increment())}>++++++</button>
+          <button className="text-black dark:text-cyan-400  dark:bg-gray-900" onClick={() => dispatch(decrement())}>--------</button>
+          <button className="text-black dark:text-cyan-400  dark:bg-gray-900" onClick={() => dispatch(incrementByAmount(5))}>
             ***********
           </button>
         </div>
 
         <div>
-          <h1 className="text-[200px]">{sec.value}</h1>
-          <button onClick={() => dispatch1(increment1())}>++++++</button>
-          <button onClick={() => dispatch1(decrement1())}>--------</button>
-          <button onClick={() => dispatch1(both(5))}>***********</button>
+          <h1 className="text-[200px] text-black dark:text-cyan-400  dark:bg-gray-900">{sec.value}</h1>
+          <button className="text-black dark:text-cyan-400  dark:bg-gray-900" onClick={() => dispatch1(increment1())}>++++++</button>
+          <button className="text-black dark:text-cyan-400  dark:bg-gray-900" onClick={() => dispatch1(decrement1())}>--------</button>
+          <button className="text-black dark:text-cyan-400  dark:bg-gray-900" onClick={() => dispatch1(both(5))}>***********</button>
         </div>
         <div className="flex items-center">
-          <h1>{modeSlice.value}</h1>
+          <h1 className="text-black dark:text-cyan-400  dark:bg-gray-900">{modeSlice.value}</h1>
           <Tooltip text={`${mode}`}>
 
           <button className="" onClick={handleToggle}>
-            {<Icons className="w-8" type={`${mode != "dark" ? "darkmode" : "lightmode"}`} />}
+            {<Icons className="w-8 text-black dark:text-cyan-400  dark:bg-gray-900" type={`${mode != "dark" ? "darkmode" : "lightmode"}`} />}
           </button>
           </Tooltip>
         </div>
