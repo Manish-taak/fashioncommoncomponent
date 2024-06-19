@@ -12,7 +12,7 @@ import { toggleMode } from "../redux/slice/ModeSlice";
 import Icons from "@/icons";
 import Tooltip from "../components/ToolTip";
 
-const Page = () => {
+const Header = () => {
     const { user, setUser } = useUser();
     const count = useAppSelector((mystate) => mystate.counterSlice);
     const sec = useAppSelector((secound) => secound.SecoundSlice);
@@ -27,9 +27,6 @@ const Page = () => {
     const mode = useAppSelector((state) => state.ModeSlice.value);
     console.log(mode, "mode");
     useEffect(() => {
-        // mode !== "dark"
-        //   ? document.body.classList.add("dark-mode")
-        //   : document.body.classList.remove("dark-mode");
         document.body.className = mode;
     }, [mode]);
 
@@ -66,19 +63,16 @@ const Page = () => {
                 </div>
                 <div className="flex items-center">
                     <h1 className="text-black dark:text-cyan-400  dark:bg-gray-900">{modeSlice.value}</h1>
-                    <Tooltip text={`${mode}`}>
-
-                        <button className="" onClick={handleToggle}>
-                            {<Icons className="w-8 text-black dark:text-cyan-400  dark:bg-gray-900" type={`${mode != "dark" ? "darkmode" : "lightmode"}`} />}
-                        </button>
-                    </Tooltip>
+                    <button className="" onClick={handleToggle}>
+                        {<Icons className="w-8 text-black dark:text-cyan-400  dark:bg-gray-900" type={`${mode != "dark" ? "darkmode" : "lightmode"}`} />}
+                    </button>
                 </div>
             </section>
         </>
     );
 };
 
-export default Page
+export default Header
 
 
 //   return (
